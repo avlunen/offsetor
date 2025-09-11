@@ -5,12 +5,12 @@
 <h2>Algorithm</p>
 The method is rather straight forward to implement:
 <ol>
-   <li>Find the points $P_{x}$ on the baseline. To do this we do the following:
+   <li>Find the points $P_{i}$ on the baseline. To do this we do the following:
       <ol>
          <li>The baseline is formed by two vectors A and B; normalize the vector A-B (a vector X is normalized by dividing its components by the magnitude of X);</li>
          <li>with the given distance $d_{i}$ from the start point of the baseline: $A - (N \times d_{i})$, with $N$ being the normalized vector from the previous step.</li>
       </ol>
    <li>Find the vector orthogonal (i.e., at a right angle) to the baseline. This can be done by a 90° rotation, which for a vector P(x,y) is simply P'(-y,x).</li>
    <li>Normalize the orthogonal vector.</li>
-   <li>Find the offset point $x$ by $x = P_{x} - (NO \times o_{i})$, with $d_{x}$ the points on the baseline computed in the first step, $NO$ being the normalized orthogonal vector, and $o_{i}$ the offset from the baseline measured in the survey.</li>
+   <li>Find the offset point $x$ by $x = P_{i} - (NO \times o_{i})$, with $P_{i}$ the points on the baseline computed in the first step, $NO$ being the normalized orthogonal vector, and $o_{i}$ the offset from the baseline measured in the survey.</li>
 </ol>
