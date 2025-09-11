@@ -12,5 +12,5 @@ The method is rather straight forward to implement:
       </ol>
    <li>Find the vector orthogonal (i.e., at a right angle) to the baseline. This can be done by a 90° rotation, which for a vector P(x,y) is simply P'(-y,x).</li>
    <li>Normalize the orthogonal vector.</li>
-   <li>Find the offset point by $NO \times o_{i}$, with $NO$ being the normalized orthogonal vector, and $o_{i}$ the offset from the baseline measured in the survey.</li>
+   <li>Find the offset point $x$ by $x = d_{x} - (NO \times o_{i})$, with $d_{x}$ the points on the baseline computed in the first step, $NO$ being the normalized orthogonal vector, and $o_{i}$ the offset from the baseline measured in the survey.</li>
 </ol>
