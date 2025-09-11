@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/offsetor" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>
