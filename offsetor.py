@@ -305,7 +305,8 @@ class Offsetor:
         if result:
             # BUBU: check that all values have been set
             if self.pointA == None or self.pointB == None:
-               self.iface.messageBar().pushMessage("Error", "Points A/B not set!", level=Qgis.Critical)
+               self.iface.messageBar().pushMessage("Error", "Points A/B not set!", level=Qgis.Critical, duration=3)
+
                return
 
             startpoint = self.pointA.geometry()
@@ -327,19 +328,22 @@ class Offsetor:
 
             while i < self.dlg.m_distances.rowCount():
                 if self.dlg.m_distances.item(i, 0) == None:
-                    self.iface.messageBar().pushMessage("Error", "ID not set!", level=Qgis.Critical)
+                    self.iface.messageBar().pushMessage("Error", "ID not set!", level=Qgis.Critical, duration=3)
+
                     return
                 else:          
                     iid = int(self.dlg.m_distances.item(i, 0).text())
 
                 if self.dlg.m_distances.item(i, 1) == None:
-                    self.iface.messageBar().pushMessage("Error", "Distance on baseline not set!", level=Qgis.Critical)
+                    self.iface.messageBar().pushMessage("Error", "Distance on baseline not set!", level=Qgis.Critical, duration=3)
+
                     return
                 else:          
                     idist = float(self.dlg.m_distances.item(i, 1).text())
 
                 if self.dlg.m_distances.item(i, 2) == None:
-                    self.iface.messageBar().pushMessage("Error", "Offset not set!", level=Qgis.Critical)
+                    self.iface.messageBar().pushMessage("Error", "Offset not set!", level=Qgis.Critical, duration=3)
+
                     return
                 else:          
                     ioff = float(self.dlg.m_distances.item(i, 2).text())
