@@ -211,6 +211,20 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Which side&lt;br/&gt;of the baseline?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
+   <widget class="QCheckBox" name="basePoints">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>370</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Include base
+line points?</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QGroupBox" name="setB">
    <property name="geometry">

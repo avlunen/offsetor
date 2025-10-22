@@ -32,7 +32,6 @@ from .resources import *
 # Import the code for the dialog
 from .offsetor_dialog import OffsetorDialog
 import os.path
-import os.path
 import csv
 import logging
 import math
@@ -338,9 +337,10 @@ class Offsetor:
 
                 # add trilaterated point to memory layer, using the id from the row in the table
                 ft = QgsFeature()
-                #ft.setGeometry(QgsGeometry.fromPointXY(QgsPointXY(p[0],p[1])))
-                #ft.setAttributes([iid])
-                #mr.addFeatures([ft])
+                if self.dlg.basePoints.isChecked() == True:
+                    ft.setGeometry(QgsGeometry.fromPointXY(QgsPointXY(p[0],p[1])))
+                    ft.setAttributes([iid])
+                    mr.addFeatures([ft])
                 ft.setGeometry(QgsGeometry.fromPointXY(QgsPointXY(c[0],c[1])))
                 ft.setAttributes([iid])
                 mr.addFeatures([ft])
