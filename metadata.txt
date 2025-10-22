@@ -7,13 +7,13 @@ name=Offsetor
 qgisMinimumVersion=3.0
 description=Calculates points from the offset positions off a base line
 version=0.1
-author=Alexander von Lunen
+author=Alexander von Lünen
 email=avl1@gmx.de
 
 about=Calculating a set of points defined by offsets from a baseline (given by its endpoints).
 
-tracker=http://bugs
-repository=http://repo
+tracker=https://github.com/avlunen/offsetor/issues
+repository=https://github.com/avlunen/offsetor
 # End of mandatory metadata
 
 # Recommended items:
@@ -25,7 +25,7 @@ hasProcessingProvider=no
 # Tags are comma separated with spaces allowed
 tags=python
 
-homepage=http://homepage
+homepage=https://github.com/avlunen/offsetor/blob/main/README.md
 category=Vector
 icon=icon.png
 # experimental flag
