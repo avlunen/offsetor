@@ -6,7 +6,7 @@
 name=Offsetor
 qgisMinimumVersion=3.0
 description=Calculates points from the offset positions off a base line
-version=0.1
+version=0.2
 author=Alexander von Lünen
 email=avl1@gmx.de
 
