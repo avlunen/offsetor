@@ -304,6 +304,10 @@ class Offsetor:
         # See if OK was pressed
         if result:
             # BUBU: check that all values have been set
+            if self.pointA == None or self.pointB == None:
+               self.iface.messageBar().pushMessage("Error", "Points A/B not set!", level=Qgis.Critical)
+               return
+
             startpoint = self.pointA.geometry()
             endpoint = self.pointB.geometry()
             x1_orig = startpoint.asPoint().x()
@@ -322,9 +326,23 @@ class Offsetor:
             memory_layer.updateFields()
 
             while i < self.dlg.m_distances.rowCount():
-                iid = int(self.dlg.m_distances.item(i, 0).text())
-                idist = float(self.dlg.m_distances.item(i, 1).text())
-                ioff = float(self.dlg.m_distances.item(i, 2).text())
+                if self.dlg.m_distances.item(i, 0) == None:
+                    self.iface.messageBar().pushMessage("Error", "ID not set!", level=Qgis.Critical)
+                    return
+                else:          
+                    iid = int(self.dlg.m_distances.item(i, 0).text())
+
+                if self.dlg.m_distances.item(i, 1) == None:
+                    self.iface.messageBar().pushMessage("Error", "Distance on baseline not set!", level=Qgis.Critical)
+                    return
+                else:          
+                    idist = float(self.dlg.m_distances.item(i, 1).text())
+
+                if self.dlg.m_distances.item(i, 2) == None:
+                    self.iface.messageBar().pushMessage("Error", "Offset not set!", level=Qgis.Critical)
+                    return
+                else:          
+                    ioff = float(self.dlg.m_distances.item(i, 2).text())
 
                 if not left:
                     ioff *= -1
